@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   res.end();
 });
 router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
-router.get('/*', (req, res) => res.json({ route: req.originalUrl });
+router.get('/*', (req, res) => res.send('OK'));
 router.post('/', (req, res) => res.json({ postBody: req.body }));
 
 app.use(bodyParser.json());
